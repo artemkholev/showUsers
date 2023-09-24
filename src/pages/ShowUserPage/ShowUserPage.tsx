@@ -1,10 +1,5 @@
-// requestUsersWithError({ name: "", age: "", limit: 4, offset: 0 }).catch(
-//   console.error
-// );
 import { useEffect, useState } from "react";
 import { useFetching } from "../../hooks/useFetching";
-// import { useUsers } from "../../hooks/useUsers";
-// import { useObserver } from "../../hooks/useObserver";
 import { UserList } from "../UserList/UserList";
 import { User, requestUsers } from "../../api";
 import style from "./showUserPage.module.scss";
@@ -25,7 +20,6 @@ export const ShowUsersPage = () => {
         limit: limit,
         offset: ((page - 1) * limit),
       });
-      // setUsers([...users, ...response]);
       setUsers(response);
   })
 
